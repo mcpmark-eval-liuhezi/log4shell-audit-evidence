@@ -1,0 +1,13 @@
+name: smoke-audit
+
+on:
+  push:
+
+jobs:
+  smoke-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Liveness check
+        run: |
+          echo "smoke-audit: repository is alive"
+          echo "Log4Shell audit evidence repo reachable at $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
